@@ -1,0 +1,148 @@
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+body {
+	display: flex;
+	justify-content: center;
+}
+
+.container {
+	width: 80%;
+	height: 100vh;
+	display: grid;
+	grid-template-rows: .75fr .5fr 5fr .4fr;
+	row-gap: 20px;
+}
+
+.header {
+	background: #9797ad4f;
+	display: grid;
+	place-items: center;
+}
+
+.search-box {
+	background: rgba(222, 222, 222, 0.1);
+	display: grid;
+	place-items: center;
+}
+
+.search-i {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100%;
+}
+
+form {
+	height: 100%;
+}
+
+.form-group {
+	float: right;
+	height: 80%;
+	position: relative;
+	margin: .3rem 0 0 0;
+}
+
+.submit-btn {
+	position: absolute;
+	top: 27%;
+	left: 6%;
+	background-color: rgba(0, 0, 0, 0);
+	border: none;
+	outline: none;
+	cursor: pointer;
+}
+
+.fa-search {
+	color: #9e9e9e40;
+	font-size: 1.8rem;
+}
+
+input[type='text'] {
+	width: 24rem;
+	height: 100%;
+	border: none;
+	outline: none;
+	background: rgba(236, 229, 229, 0.82);
+	padding: 0 0 0.3rem 4.5rem;
+	color: #9e8181;
+	font-size: 1.6rem;
+	border-radius: 0.5rem;
+}
+
+input[type='text']::placeholder {
+	color: #f3f3f3;
+}
+
+.error-msg {
+	display: hidden;
+	position: absolute;
+	left: 2rem;
+	color: #ff3333;
+	font-size: 15px;
+	display: none;
+}
+/* information box */
+
+.information-box {
+	height: 70%;
+	margin: auto 0;
+	background: rgba(140, 140, 140, 0.113);
+	border-radius: 10px;
+	padding: 60px;
+	display: grid;
+	grid-template-columns: .5fr repeat(3, 1fr) .5fr;
+	grid-template-rows: 1fr 1fr 5fr;
+}
+
+.weather_condition{
+	grid-row: 1/2;
+	grid-column: 2/3;
+
+}
+.weather_location{
+	grid-row: 2/3;	
+	grid-column: 2/3;
+}
+.weather_condition,
+.weather_location{
+	display: flex;
+	justify-content: start;
+	align-items: flex-end;
+	font-size: larger;
+	font-weight: bold;
+}
+
+.temp-c{
+	grid-row: 3/-1;
+	grid-column: 2/3;
+	font-size: 80px;
+	display: grid;
+	place-items: center;
+	padding-right: 20px;
+}
+.detail{
+	background-color: rgba(219, 193, 126, 0.312);
+	border-radius: 10px;
+	grid-column: 3/5;
+	grid-row: 3/4;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-evenly;
+	padding: 10px;
+	margin: 15px;
+	font-weight: bold;
+
+}
+/* information box */
+.footer {
+	background-color: rgb(222, 233, 255);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 10px;
+}

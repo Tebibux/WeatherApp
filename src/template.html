@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="preconnect" href="https://fonts.googleapis.com" />
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+	<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet" />
+	<link rel="shortcut icon" href="favicon.ico" />
+	<link rel="preconnect" href="https://fonts.gstatic.com" />
+	<link href="https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap" rel="stylesheet" />
+	<link rel="preconnect" href="https://fonts.gstatic.com" />
+	<link rel="preconnect" href="https://fonts.gstatic.com" />
+	<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@800&family=Source+Sans+Pro:wght@900&display=swap"
+		rel="stylesheet" />
+	<script src="https://kit.fontawesome.com/4c536a6bd5.js" crossorigin="anonymous" ;></script>
+	<title><%= htmlWebpackPlugin.options.title %></title>
+</head>
+
+<body>
+	<div class="container">
+		<!-- the header -->
+		<div class="header">
+			<h1>Weather App</h1>
+		</div>
+		<!-- the search box -->
+		<div class="search-box">
+			<div class="search-i">
+				<!-- 
+					<input type="text" class="search" name="user_input" id="user_input">
+					
+				<button id="search" class="search">Search</button>
+				-->
+				<form>
+					<div class="form-group">
+						<button class="submit-btn">
+							<i class="fas fa-search"></i>
+						</button>
+						<input type="text" placeholder="Search city" />
+					</div>
+				</form>
+			</div>
+		</div>
+		<!-- information box -->
+		<div class="information-box">
+			<div class="information weather_condition">Cloudy</div>
+			<div class="information weather_location" id="country">Addis Ababa, Ethiopia</div>
+			<div class="temp-c">100&#8451;</div>
+			<div class="detail">
+				<div class="wind">wind: </div>
+				<div class="humidity">humidity: </div>
+				<div class="other-para">Other: </div>
+			</div>
+
+		</div>
+		<!-- footer -->
+		<footer class="footer">
+			<div class="footer-text">
+				<h4>TheOdinProject 2022 Tebibux ©</h4>
+			</div>
+			<div class="footer-link"><a href="http://github.com/Tebibux/WeatherApp" target="_blank"><i
+						class="fab fa-github" aria-hidden="true"></i></a></div>
+		</footer>
+	</div>
+</body>
+
+</html>

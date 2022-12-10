@@ -68,6 +68,7 @@ async function getWeatherData(userInputValue) {
 		const humidity = document.querySelector('.humidity');
 		// feels like temperature
 		const feelsLikeTemp = document.querySelector('.feelsLike');
+		// passes the fetched json object to make the DOM
 		makeDom(weatherData);
 		console.log(weatherData.location.country)// country
 		console.log(weatherData.location.name)// city name
@@ -79,7 +80,13 @@ async function getWeatherData(userInputValue) {
 	}
 	// take fetched api-request and display
 	function makeDom(fetchResult){
-		
+		let degreeSign = '&#8451;'
+		weather_location.innerText = `${fetchResult.location.name}, ${fetchResult.location.country}`;
+		weather_condition.innerText =`${fetchResult.current.condition.text}`;
+		actual_temp.innerText = `${fetchResult.current.temp_c}\u00B0C`;
+		humidity.innerText = `HUMIDITY:  ${fetchResult.current.humidity}`;
+		windSpeed.innerText = `WIND:  ${fetchResult.current.wind_kph} Kph`;
+		feelsLikeTemp.innerText = `FEELS LIKE:  ${fetchResult.current.feelslike_c} \u00B0C`;
 	}
 	function throwErrorMessage() {
 		weather_location.innerText = 'no match found';

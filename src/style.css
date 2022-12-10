@@ -86,6 +86,7 @@ input[type='text']::placeholder {
 	font-size: 15px;
 	display: none;
 }
+
 /* information box */
 
 .information-box {
@@ -99,33 +100,38 @@ input[type='text']::placeholder {
 	grid-template-rows: 1fr 1fr 5fr;
 }
 
-.weather_condition{
+.weather_condition {
 	grid-row: 1/2;
 	grid-column: 2/3;
+	color: #5d5050;
+	font-size: larger;
+}
 
+.weather_location {
+	grid-row: 2/3;
+	grid-column: 2/4;
+	color: #303030;
+	font-size: 30px;
 }
-.weather_location{
-	grid-row: 2/3;	
-	grid-column: 2/3;
-}
+
 .weather_condition,
-.weather_location{
+.weather_location {
 	display: flex;
 	justify-content: start;
 	align-items: flex-end;
-	font-size: larger;
 	font-weight: bold;
 }
 
-.temp-c{
+.temp-c {
 	grid-row: 3/-1;
 	grid-column: 2/3;
-	font-size: 80px;
+	font-size: 75px;
 	display: grid;
 	place-items: center;
 	padding-right: 20px;
 }
-.detail{
+
+.detail {
 	background-color: rgba(219, 193, 126, 0.312);
 	border-radius: 10px;
 	grid-column: 3/5;
@@ -138,6 +144,7 @@ input[type='text']::placeholder {
 	font-weight: bold;
 
 }
+
 /* information box */
 .footer {
 	background-color: rgb(222, 233, 255);
